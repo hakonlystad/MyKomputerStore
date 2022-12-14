@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/iqt8kgi.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1><span class="centering">My Komputer Store</span></h1>
+</header>
+<main id="gridContainer">
+
+<div class="centering bankingGrid">
+
+<section id="bankSection">
+    <h2 id="customerName">Kundenavn</h2>
+    <div class="showInfo">
+        <p class="info">Balance:</p>
+        <p class="info" id="balance">0</p>
+    </div>
+    <div class="showInfo" id="loanInfo">
+        <p class="info">Outstanding loan:</p>
+        <p class="info" id="loan">0</p>
+    </div>
+    <p class="message" id="bankMessage"></p>
+    <button type="button" class="bigBtn" id="getLoan">Get a loan</button>
+    <div class="UI" id="loanUI">
+        <div class="inputField">
+            <label for="loanRequest">How much do you wish to loan? </label>
+            <input type="number" id="loanRequest" name="loanReq" value="0" min="0" max="1000"><span>NOK</span>
+        </div>
+        <div class="btnBox">
+            <button id="cancelLoanRequest">Cancel</button>
+            <button class="okBtn" id="submitLoanRequest">Request</button>
+        </div>
+        <p id="requestResponse"></p>
+    </div>
+    <button type="button" class="bigBtn payBtns" id="bankPayBtn">Pay loan from bank</button>
+    <div class="UI" id="bankPaykUI">
+        <div class="inputField">
+            <label for="bankPayAmount">Amount to transfer to your loan: </label>
+            <input type="number" id="bankPayAmount" name="bankPayAmount" value="0" min="0" max="1000"><span>NOK</span>
+        </div>
+        <div class="btnBox">
+            <button type="button" id="cancelBankPay">Cancel</button>
+            <button type="button" class="okBtn" id="confirmBankPay">Confirm</button>
+        </div>
+    </div>
+</section>
+
+<section id="workSection">
+    <h2>Work</h2>
+    <div class="showInfo" id="workInfo">
+        <p class="info">Pay:</p>
+        <p class="info" id="cash"></p>
+    </div>
+    <p class="message" id="workMessage"></p>
+    <div class="btnBox workBtns">
+        <button type="button" class="bigBtn" id="workBtn">Work</button>
+        <button type="button" class="bigBtn" id="BankBtn">Bank</button>
+    </div>
+    <div class="UI" id="bankUI">
+        <div class="inputField">
+            <label for="bankTransfer">Amount to transfer to your account: </label>
+            <input type="number" id="bankTransfer" name="bankTrans" value="0" min="0"><span>NOK</span>
+        </div>
+        <div class="btnBox">
+            <button id="cancelTransfer">Cancel</button>
+            <button class="okBtn" id="confirmTransfer">Transfer</button>
+        </div>
+    </div>
+        <button type="button" class="bigBtn payBtns" id="payBackBtn">Pay back loan</button>
+        <div id="payBackUI">
+            <div class="inputField">
+                <label for="payBack">Amount to pay back to your loan: </label>
+                <input type="number" id="payBack" name="bankTrans" value="0" min="0"><span>NOK</span>
+            </div>
+            <div class="btnBox">
+                <button id="cancelPayBack">Cancel</button>
+                <button class="okBtn" id="confirmPayBack">Pay</button>
+            </div>
+        </div>
+    
+</section>
+
+</div>
+
+<section id="komputerStoreSection">
+    <h2 id="sale"><span class="centering">Komputers for sale!</span></h2>
+
+<div class="centering">
+    <article id="komputerInfo">
+        <div id="komputerSpecs">
+            <select id="komputersList"></select>
+            <h3>Features</h3>
+            <ul id="showSpecs"></ul>
+        </div>
+    
+        <div id="komputerImageHolder">
+            <img id="komputerImage" src="" alt="missing image of komputer">
+        </div>
+        <div id="descriptionArea">
+            <h2 id="komputerName"></h2>
+            <p id="komputerDescription"></p>
+        </div>
+        <div id="saleArea">
+            <h4 id="komputerPrice"></h4>
+            <button class="bigBtn" type="button" id="buyBtn">Buy now</button>
+        </div>
+    </article>
+    <p class="message buyAnimation" id="buyMessage"></p>
+
+</div>
+
+</section> 
+
+<section id="myKomputersSection">
+    <h2><span class="centering">My Komputers</span></h2>
+    <div id="collection"></div>
+</section>
+
+</main>  
+<script type="module" src="app.js"></script> 
+</body>
+</html>

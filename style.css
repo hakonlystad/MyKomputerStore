@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --blackish: rgb(49, 36, 38);
+    --bodyBack: rgb(165, 184, 201);
+    --headBack: ;
+    --bankBack: rgb(253, 228, 219);
+    --infoBack: rgb(255, 245, 240);
+    --btnBorder: rgb(193, 151, 140);
+    --loanBtn: rgb(145, 77, 182);
+    --workBtn: rgb(255, 140, 88);
+    --bankBtn: rgb(97, 176, 255);
+    --payBtns: rgb(253, 192, 207);
+    --cancelBtns: rgb(217, 210, 212);
+    --okBtn: rgb(108, 232, 176);
+    --buyBtn: rgb(59, 248, 255);
+    --saleBack: rgb(30, 27, 44);
+    --saleTxt: white;
+    --komputerSection: rgb(57, 51, 78);
+    --komputerBack: rgb(30, 27, 44);
+    --komputerTxt: rgb(137, 224, 255);
+    --komputersBorder: blue;
+    --komputerHiglight: white;
+    --komputerName: rgb(255, 140, 88);
+    --myKomputersSection: rgb(30, 27, 44);
+    --myKomputersTxt: #9ef28f;
+    --myKomputersBack: ;
+    --glow: rgba(255, 133, 80, 0.625);
+
+}
+
+/*  ––– A FEW GENERAL RULES –––  */
+
+* {box-sizing: border-box;}
+body {
+    margin: 0;
+    background-color: var(--bodyBack);
+    font-family: Inter, sans-serif;
+    color: var(--blackish)
+}
+p {margin:0}
+section { 
+    margin: 0.9rem 0;
+}
+ul {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+h1 {
+    font: 700 2.8rem ff-chambers-sans-web, Inter, sans-serif;
+    margin-bottom: 2.5rem;
+    margin-top: 1.4rem;
+    padding: 0.8rem 0;
+    
+    background-color: var(--komputerSection);
+    color: white;
+
+}
+
+/*  For centering stuff...  */
+
+.centering {
+    max-width: calc(24.5rem + 6vw);
+    margin: auto;
+    display: block;
+}
+
+/*  Buttons...  */ 
+button {
+    border-radius: 1rem;
+    border: 1px solid var(--btnBorder);
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    min-width: 5rem;
+    font: 460 0.87rem Inter, sans-serif;
+    color: var(--blackish);
+    background-color: var(--cancelBtns);
+
+}
+button:hover {
+    cursor: pointer;
+    border-color: var(--blackish);
+}
+.bigBtn {
+    min-width: calc(6.7rem + 7vw);
+    min-height: 3rem;
+    display: block;
+    padding: 0.6rem 1rem;
+    font: 500 1.05rem Inter, sans-serif;
+    letter-spacing: 0.01rem;
+}
+.okBtn {
+    background-color: var(--okBtn);
+}
+.btnBox {
+    display: flex;
+    justify-content: right;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+#getLoan {
+    background-color: var(--loanBtn);
+    color: white;
+}
+.workBtns {
+    justify-content: space-between;
+}
+#workBtn {
+    background-color: var(--workBtn);
+    color: black;
+}
+#workBtn:active {
+    box-shadow: 0 0 17px 3px rgba(235, 69, 50, 0.555);
+}
+#BankBtn {
+    background-color: var(--bankBtn);
+}
+.payBtns {
+    background-color: var(--loanBtn);
+    color: white;
+}
+
+/*  ––– BANKING SECTION ––– */
+
+
+input {
+    padding: 0.2rem 0.4rem;
+    border: 1px solid rgb(151, 19, 19);
+    border-radius: 7px;
+    width: 93%;
+    min-width: 6rem;
+}
+
+
+.inputField {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: baseline;
+    gap: 0.3rem;
+    margin: 0.6rem 0;
+}
+.UI {
+    margin: 0.7rem 0;
+}
+
+
+
+#bankSection, #workSection {
+    background-color: var(--bankBack);
+    border-radius: 7px;
+    padding: 1rem;
+    box-shadow: 2px 6px 10px rgb(132, 127, 135);
+}
+.showInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1.4rem 0.5rem 0.7rem;
+    background-color: var(--infoBack);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+.message {
+    height: 3rem;
+}
+
+/* ––– KOMPUTER INFO ––– */
+
+#komputerStoreSection {
+    background-color: var(--komputerSection);
+    color: var(--komputerTxt);
+    margin: 0;
+    margin-top: 2.1rem;
+}
+
+#sale {
+    background-color: var(--saleBack);
+    color: var(--komputerName);
+    margin: 0 0 1.2rem 0;
+    padding: 1.4rem 0;
+    font: 700 italic 2.6rem ff-chambers-sans-web, Inter, sans-serif;
+}
+#komputerInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background-color: var(--komputerBack);
+    border: 1px solid var(--komputerTxt);
+    border-radius: 7px;
+    padding: 1.4rem;
+}
+h3 {
+    margin: 1rem 0 0.3rem;
+    font: 600 1.37rem Inter, sans-serif;
+    letter-spacing: 0.01rem;
+}
+#komputersList {
+    padding: 0.3rem;
+    border: 2px solid var(--komputerTxt);
+    border-radius: 7px;
+}
+#komputerSpecs li {
+    border-bottom: 1px solid var(--komputerTxt);
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
+    font: 300 0.93rem Inter, sans-serif;
+}
+#komputerImage {
+    display: block;
+    max-width: 100%;
+    max-height: 280px;
+    margin: auto;
+    border-radius: 14px;
+}
+#komputerName {
+    color: var(--komputerName);
+    margin: 0 0 0.6rem;
+    font: 700 2rem ff-chambers-sans-web, Inter, sans-serif;
+    letter-spacing: 0.03rem;
+
+}
+#saleArea {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 0.
+}
+#komputerPrice {
+    color: var(--komputerHiglight);
+    font-size: 1.4rem;
+    font-weight: 560;
+    letter-spacing: 0.03rem;
+
+}
+
+/*  The Buy button...  */
+#buyBtn {
+    background-color: var(--buyBtn);
+    border: 0;
+    min-height: 3.6rem;
+    color: var(--komputerBack)
+}
+#buyBtn:hover {
+    box-shadow: 0px 0px 19px 5px rgba(39, 244, 196, 0.475);
+    color: rgb(0, 111, 155);
+}
+#buyMessage {
+    min-height: 4.2rem;
+    text-align: center;
+    padding-top: 1.2rem;
+    font: 500 1.3rem Inter, sans-serif;
+    color: rgb(255, 178, 119);
+
+}
+.buyAnimation {
+    animation-name: glowAnim;
+    animation-duration: 5.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    /*animation-iteration-count: infinite;*/
+}
+@keyframes glowAnim {
+    0% {opacity: 1;
+        color: rgb(235, 142, 71);
+        text-shadow: 0px 0px 0px var(--glow);}
+    10% {text-shadow: 0px 0px 14px var(--glow);
+        color: rgb(255, 244, 204);}
+    27% {text-shadow: 0px 0px 0px var(--glow);
+        color: rgb(252, 157, 84);}
+    60% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+/* ––– MyKOMPUTERS ––– */
+
+
+
+#myKomputersSection {
+    background-color: var(--myKomputersSection);
+    color: var(--myKomputersTxt);
+    padding: 0.7rem;
+    margin: 0;
+    border-top: 1px solid var(--myKomputersTxt);
+    
+}
+#myKomputersSection h2 {
+    font: 700 2.6rem ff-chambers-sans-web, Inter, sans-serif;
+    letter-spacing: calc(0.01rem + 0.2vw);
+}
+#myKomputersSection img {
+    display: block;
+    max-width: 120px;
+    max-height: 90px;
+    float: left;
+    margin: 0.5rem 1.2rem 1.7rem 0.5rem;
+    border-radius: 7px;
+}
+#collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 0.7rem;
+}
+#collection div {
+    background-color: var(--myKomputersBack);
+    padding: 0.6rem;
+    border-radius: 7px;
+    min-height: 110px;
+    border: 1px solid var(--myKomputersTxt);
+    border-radius: 7px;
+}
+#collection h4 {
+    margin: 0.5rem 0.7rem;
+    font-weight: 700;
+    font-size: 1.12rem;
+    letter-spacing: 0.015rem;
+}
+#collection p {
+    margin: 0.7rem;
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+    .inputField {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+        "text text"
+        "input nok"
+        ;
+        align-items: baseline;
+    }
+    input {
+        grid-area: input;
+    }
+    span {
+        grid-area: nok;
+    }
+    .btnBox {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .centering {
+        max-width: calc(53rem + 8vw);
+        padding: 1rem;
+    }
+    .bankingGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+        
+    }
+    #komputerInfo {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "specs title"
+        "specs image"
+        "specs sale"
+        ;
+        gap: 1rem;
+        grid-column-gap: calc(1.7rem + 3vw);
+        
+    }
+    #komputerSpecs {
+        grid-area: specs;
+    }
+    #komputerImageHolder {
+        grid-area: image;
+    }
+    #descriptionArea {
+       /* margin: auto;*/
+    }
+    #komputerImage {
+        display: block;
+        max-width: 100%;
+        max-height: calc(285px + 7vw);
+        margin: 0;
+        border-radius: 14px;
+    }
+    #komputerName {
+        color: var(--komputerName);
+        margin: 0 0 0.6rem;
+        font-size: 2.32rem;
+    
+    }
+    #saleArea {
+        justify-content: left;
+        gap: calc(3rem + 2vw);
+        padding-left: calc(2rem + 1vw);
+    }
+    #komputerDescription {
+        max-width: 24rem;
+    }
+    #komputersList {
+        margin-top: 0.8rem;
+        margin-bottom: 0.7rem;
+    }
+    #komputerInfo {
+        padding: 1.6rem;
+    }
+}
